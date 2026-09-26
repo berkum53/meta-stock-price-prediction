@@ -26,19 +26,3 @@ Getiri modelleri doğrudan fiyat modellerinden daha düşük hata verdi. Ancak b
 Gönderilen AMZN örneğinde GRU RMSE 5,99 $ ve LSTM RMSE 8,56 $ görünüyor; farklı hisse ve tarih aralığı olduğu için bunları META hatalarıyla doğrudan sıralayamıyorum. META'nın eğitim döneminde en yüksek kapanışı 382,18 $, değerlendirme döneminde en düşük kapanışı 453,41 $. Doğrudan fiyat modellerinin ilerideki daha yüksek seviyelere uyum sağlayamaması büyük hata için makul bir açıklama. AMZN örneğinde ölçekleyici eğitim/test ayrımından önce bütün veriye uygulanmış; sonraki dönemin fiyat aralığı hazırlığa karıştığından o sonuçları bizim ayrımla eşdeğer kabul etmiyorum. AMZN örneğinin son fiyat kıyası verilmediği için 5,99 $'lık hatanın basit tahminden iyi olup olmadığını da bilmiyorum.
 
 Getiri modellerini ilk fiyat sonuçlarını gördükten sonra ekledim. Dolayısıyla aynı değerlendirme dönemindeki getiri kıyası keşif amaçlı; bağımsız yeni bir veri dönemiyle teyit edilmedi. Tek hisse, tek ayrım ve tek rastgele başlangıç kullanıldı. İşlem maliyetleri ve yatırım getirisi hesaplanmadı.
-
-## Çalıştırma
-
-Python 3.12 ile test edildi. Proje klasöründe:
-
-```bash
-python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
-python -m pip install -r requirements.txt
-python analysis.py
-```
-
-Paylaşılan proje paketinde `data/META_yahoo.csv` bulunuyor. Aynı tarihleri yeniden indirmek isterseniz `python download_data.py` kullanılabilir; Yahoo tarafındaki değişiklikler sonucu farklılaştırabilir. Notebook için `stock_price_prediction.ipynb` dosyasını açın. Kod kendi çalıştığı klasördeki CSV'yi de kabul eder. `data/source.json` veri kaynağını ve dosyanın SHA256 özetini içerir.
-
-Depodaki ana dosyalar: `README.md` (bu açıklama), `stock_price_prediction.ipynb` (yalnızca kod hücreleri ve çıktıları), `analysis.py` (aynı analizin betiği), `requirements.txt`, `data/META_yahoo.csv`, `data/source.json` ve özet sonuçların bulunduğu `results/`.
-
-Kaynaklar: Yahoo Finance; yukarıdaki Medium yazısı; PyTorch, scikit-learn ve statsmodels belgeleri; Hyndman ve Athanasopoulos, *Forecasting: Principles and Practice*.
