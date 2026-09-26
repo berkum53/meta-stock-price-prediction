@@ -1,6 +1,6 @@
 # META hisse fiyatı tahmini
 
-Bu projede PyTorch ile LSTM ve GRU kullanarak META hissesinin bir sonraki işlem günündeki kapanışını tahmin ettim. Başlangıç fikri [Rodolfo Saldanha'nın LSTM–GRU örneği](https://medium.com/swlh/stock-price-prediction-with-pytorch-37f52ae84632). Oradaki Amazon fiyatları yerine Yahoo Finance üzerinden alınan META verisini kullandım. Finansal ekonometri dersindeki getiri yaklaşımını da aynı verilere uygulayarak sonuçları karşılaştırdım.
+Bu projede PyTorch ile LSTM ve GRU kullanarak META hissesinin bir sonraki işlem günündeki kapanışını tahmin ettim. Yahoo Finance üzerinden alınan META verisini kullandım. İşletme Mühendisliği öğrencisi olarak Finansal ekonometri dersindeki getiri yaklaşımını da aynı verilere uygulayarak sonuçları karşılaştırdım.
 
 ## Ne yaptım?
 
