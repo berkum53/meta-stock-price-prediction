@@ -23,6 +23,4 @@ Bu projede PyTorch ile LSTM ve GRU kullanarak META hissesinin bir sonraki işlem
 
 Getiri modelleri doğrudan fiyat modellerinden daha düşük hata verdi. Ancak basit son fiyat tahminini hiçbiri geçmedi. Fiyat tahmininde tek başına yüksek R² yanıltıcı olabiliyor: basit kıyasın da R² değeri 0,9642. Bu yüzden RMSE ve son fiyat kıyasına göre R²'yi birlikte değerlendirdim. Eğitim dönemindeki ADF testinde log fiyat için birim kök hipotezi reddedilemedi, log getiri için reddedildi.
 
-META'nın eğitim döneminde en yüksek kapanışı 382,18 $, değerlendirme döneminde en düşük kapanışı 453,41 $. Doğrudan fiyat modellerinin ilerideki daha yüksek seviyelere uyum sağlayamamasının büyük hata için kabul edilebilir bir açıklama olduğunu düşünüyorum.
-
 Getiri modellerini ilk fiyat sonuçlarını gördükten sonra ekledim. Dolayısıyla aynı değerlendirme dönemindeki getiri kıyası keşif amaçlı; bağımsız yeni bir veri dönemiyle teyit edilmedi. Tek hisse, tek ayrım ve tek rastgele başlangıç kullanıldı. İşlem maliyetleri ve yatırım getirisi hesaplanmadı.
